@@ -11,6 +11,6 @@ class PassThroughProducer(servers: String, private val topic: String) : Producer
     }
 
     override fun process(message: String) {
-//        write()
+        write(producer, topic, message)
     }
 }
